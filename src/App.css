@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: #23252c;
+  --heading-color: #ffffff;
+  --stack-color: #F3BF99;
+  --text-color: #DCDCDC;
+  --card-body-color: #1A1B21;
+  --email-button-stroke: #D1D5DB;
+  --email-button-color: #ffffff;
+  --footer-color: #161619;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (prefers-color-scheme: light) {
+  :root {
+    --heading-color: #2B283A;
+    --stack-color: #F47D27;
+    --text-color: #4A4E74;
+    --card-body-color: #F5F5F5;
+    --email-button-stroke: #D1D5DB;
+    --email-button-color: #ffffff;
+    --footer-color: #D5D4D8;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.card {
+  width: 317px;
+}
+
+.card--body {
+background-color: var(--card-body-color);
+  padding: 30px;
+  margin-top: -20px;
+}
+
+.card--name {
+  color: var(--heading-color);
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+}
+
+.card--stack {
+  color: var(--stack-color);
+  text-align: center;
+  margin-top: 2px;
+  font-size: 12.8px;
+}
+
+.card--website {
+  text-align: center;
+  margin-top: 5px;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 10.24px;
+}
+
+.section--heading {
+  font-size: 16px;
+  color: var(--heading-color);
+  margin: 20px 0 0;
+}
+
+.email-button {
+  background-color: var(--email-button-color);
+  border: 1px solid var(--email-button-stroke);
+  height: 34px;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.email-button > img {
+  width: 16px;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card--footer {
+  background-color: var(--footer-color);
+  height: 64px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
 }
+
